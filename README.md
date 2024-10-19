@@ -33,32 +33,32 @@
 # Instalação e Configuração
 
 - Clone este repositório:
-```bash
+    ```bash
     git clone https://github.com/seu-usuario/agenda-completa.git
 
 - Instale as dependências do projeto:
-```bash
-    npm install
+    ```bash
+      npm install
 
 - Execute o projeto no Expo:
-```bash
-    expo start
+    ```bash
+     expo start
 
 - Criar projecto
- ```bash
-    npm install --global eas-cli 
- ```bash
-    npx create-expo-app agenda 
+    ```bash
+        npm install --global eas-cli 
+    ```bash
+        npx create-expo-app agenda 
 
- - Acessar o projecto
- ```bash
-    cd agenda
+- Acessar o projecto
+    ```bash
+      cd agenda
 
 - Rodar o projecto
-```bash
-    expo start
-    
+    ```bash
+      expo start
+
 - Rodar testes unitário
-```bash
-    npm test
+    ```bash
+      npm test
 
