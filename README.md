@@ -47,7 +47,6 @@
 - Criar projecto
     ```bash
         npm install --global eas-cli 
-    ```bash
         npx create-expo-app agenda 
 
 - Acessar o projecto
