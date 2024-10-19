@@ -28,4 +28,4 @@ jobs:
 
       - name: Run tests
         run: |
-          npm test  # ou outro comando, dependendo de como os testes são configurados
+          npm test 
