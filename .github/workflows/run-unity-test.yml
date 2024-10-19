@@ -1,35 +1,31 @@
 name: Run React Native Tests
 
-# O workflow será executado toda vez que um push for feito no repositório
 on: [push]
 
 jobs:
   run-react-native-tests:
     name: Run React Native Tests
-    runs-on: ubuntu-latest  # Executa em um ambiente Linux
+    runs-on: ubuntu-latest  
 
     steps:
-      # Passo 1: Fazer checkout do código
+     
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Passo 2: Configurar Node.js
+     
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Escolha a versão do Node.js que você está usando
+          node-version: '22' 
 
-      # Passo 3: Instalar dependências do projeto
       - name: Install dependencies
         run: |
           npm install
 
-      # Passo 4: Instalar o Expo CLI globalmente (caso necessário para o projeto)
       - name: Install Expo CLI
         run: |
           npm install -g expo-cli
 
-      # Passo 5: Rodar os testes (usando Jest ou outra ferramenta de teste configurada)
       - name: Run tests
         run: |
           npm test  # ou outro comando, dependendo de como os testes são configurados
