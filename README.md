@@ -1,50 +1,64 @@
-# Welcome to your Expo app 👋
+### Agenda
+    Agenda é uma aplicação móvel desenvolvida para ajudar os usuários a gerenciar suas atividades diárias, permitindo a criação de notas e tarefas com alertas, além de uma integração com um calendário para organizar as tarefas por data e hora. A aplicação foi construída com foco em produtividade, proporcionando uma interface intuitiva e eficiente.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# Objetivo
+    A Agenda foi criada para fornecer uma solução prática e acessível para gerenciar notas, tarefas e eventos. O objetivo é ajudar os usuários a se organizarem melhor, permitindo que eles criem lembretes, recebam notificações e tenham uma visão clara das suas atividades através de um calendário integrado.
 
-## Get started
+# Funcionalidades
+    Criação de Notas e Tarefas: Os usuários podem criar notas e tarefas com descrições detalhadas e associá-las a datas específicas no calendário.
 
-1. Install dependencies
+    Atualização e Eliminação de Notas: As notas podem ser editadas ou excluídas conforme necessário, oferecendo flexibilidade e controle total ao usuário.
 
-   ```bash
-   npm install
-   ```
+    Calendário Integrado: O calendário permite que as tarefas sejam visualizadas de acordo com o dia e a hora, facilitando o planejamento diário e semanal.
 
-2. Start the app
+    Lista de Tarefas: Visualize e gerencie todas as tarefas em uma lista organizada, permitindo acompanhar o progresso e as atividades pendentes.
 
-   ```bash
-    npx expo start
-   ```
+    Alarme de Tarefas: A aplicação oferece a opção de configurar alarmes para alertar o usuário quando uma tarefa ou atividade estiver se aproximando da data e hora definidas.
 
-In the output, you'll find options to open the app in a
+    Notificações em Tempo Real: Receba alertas no momento certo para nunca perder um compromisso importante.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+# Tecnologias Utilizadas
+    A Agenda Completa foi desenvolvida utilizando as seguintes tecnologias, garantindo uma experiência otimizada e fluida para os usuários:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- TypeScript para tipagem e segurança durante o desenvolvimento.
+- React Native e Expo para o desenvolvimento da interface e da experiência móvel.
+- NativeWind para estilização rápida e eficiente dos componentes.
+- React Navigation (Route Navigator) para a navegação entre as telas de forma fluida e intuitiva.
+- SQLite para armazenar as notas, tarefas e eventos localmente no dispositivo do usuário.
+- Bibliotecas de Ícones para melhorar a interface visual, oferecendo uma experiência moderna e acessível.
 
-## Get a fresh project
+# Como Contribuir
+    O projeto Agenda Completa está aberto para contribuições. Se você deseja colaborar com melhorias, adicionar novas funcionalidades ou corrigir bugs, sinta-se à vontade para abrir uma issue ou enviar um pull request no repositório.
 
-When you're ready, run:
+# Instalação e Configuração
 
+- Clone este repositório:
 ```bash
-npm run reset-project
-```
+    git clone https://github.com/seu-usuario/agenda-completa.git
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- Instale as dependências do projeto:
+```bash
+    npm install
 
-## Learn more
+- Execute o projeto no Expo:
+```bash
+    expo start
 
-To learn more about developing your project with Expo, look at the following resources:
+- Criar projecto
+ ```bash
+    npm install --global eas-cli 
+ ```bash
+    npx create-expo-app agenda 
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+ - Acessar o projecto
+ ```bash
+    cd agenda
 
-## Join the community
+- Rodar o projecto
+```bash
+    expo start
+    
+- Rodar testes unitário
+```bash
+    npm test
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.

@@ -31,6 +31,12 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b668c492-fef7-4062-8a93-a29ee7ea6b91"
+      }
+    },
+    "owner": "romeu_cajamba"
   }
 }
