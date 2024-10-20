@@ -1,36 +1,38 @@
  import * as SQLite from 'expo-sqlite';
 
-export const abrirBancoDeDados = async () => {
-  const db = await SQLite.openDatabaseAsync('agendaApp.db');
-  return db;
-};
-
-export const criarTabelas = async (db: any) => {
-  await db.execAsync(`
-    PRAGMA journal_mode = WAL;
-
-    -- Criar tabelas
-    CREATE TABLE IF NOT EXISTS atividades (
-      id INTEGER PRIMARY KEY NOT NULL,
-      descricao TEXT NOT NULL,
-      status TEXT CHECK( status IN ('pendente', 'terminado', 'iniciado', 'cancelado') ) NOT NULL,
-      data_criacao TEXT NOT NULL
-    );
-
-    CREATE TABLE IF NOT EXISTS lista (
-      id INTEGER PRIMARY KEY NOT NULL,
-      item TEXT NOT NULL,
-      categoria TEXT
-    );
-
-    CREATE TABLE IF NOT EXISTS notas (
-      id INTEGER PRIMARY KEY NOT NULL,
-      titulo TEXT NOT NULL,
-      conteudo TEXT NOT NULL
-    );
-  `);
-};
-
+ export const abrirBancoDeDados = async () => {
+   const db = await SQLite.openDatabaseAsync('agendaApp.db');
+   await criarTabelas(db);
+ 
+   return db;
+ };
+ 
+ export const criarTabelas = async (db: any) => {
+   await db.execAsync(` 
+     PRAGMA journal_mode = WAL;
+ 
+     -- Criar tabelas
+     CREATE TABLE IF NOT EXISTS atividades (
+       id INTEGER PRIMARY KEY NOT NULL,
+       descricao TEXT NOT NULL,
+       status TEXT CHECK( status IN ('pendente', 'terminado', 'iniciado', 'cancelado') ) NOT NULL,
+       data_criacao TEXT NOT NULL
+     );
+ 
+     CREATE TABLE IF NOT EXISTS lista (
+       id INTEGER PRIMARY KEY NOT NULL,
+       item TEXT NOT NULL,
+       categoria TEXT
+     );
+ 
+     CREATE TABLE IF NOT EXISTS notas (
+       id INTEGER PRIMARY KEY NOT NULL,
+       titulo TEXT NOT NULL,
+       conteudo TEXT NOT NULL
+     );
+   `);
+ };
+ 
 
 /** import * as SQLite from 'expo-sqlite';
 

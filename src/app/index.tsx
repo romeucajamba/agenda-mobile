@@ -1,59 +1,39 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from "react-native";
 import { Ionicons, FontAwesome } from '@expo/vector-icons';
+import { Link } from "expo-router";
 
 export default function Home({ navigation }: any){
-    function goCalendar(){
-        navigation.navigate('Calendar')
-    }
 
-    function goActivities(){
-        navigation.navigate('Activities')
-    }
-
-    function goNotes(){
-        navigation.navigate('Notes')
-    }
-    function goList(){
-        navigation.navigate('Lists')
-    }
 
     return (
-        <View className="flex-1 justify-center items-center bg-gray-100">
-            <Text className="text-2xl font-bold mb-8">Agenda</Text>
-            <View className="flex flex-row items-center justify-center w-screen h-14 bg-red-700">
+        <View className="flex-1 items-center bg-gray-100">
+          <Text className="text-2xl font-bold mt-14 mb-4">Agenda</Text>
+          <View className="flex flex-row items-center w-screen h-20">
 
-            <TouchableOpacity
-                className="flex-row items-center mb-4 bg-gray-200 rounded-lg p-4 w-4/5 justify-center"
-                onPress={goCalendar}
+            <Link href="/calendar"
+                className="flex-row items-center mb-4 bg-gray-200 rounded-lg p-2 w-12 justify-center ml-14"
             >
-                <Ionicons name="calendar" size={32} color="black" />
-                <Text className="ml-2 text-lg">Calendário</Text>
-            </TouchableOpacity>
+                <Ionicons name="calendar" size={25} color="black" />
+            </Link>
 
-            <TouchableOpacity
-                className="flex-row items-center mb-4 bg-gray-200 rounded-lg p-4 w-4/5 justify-center"
-                onPress={goNotes}
+            <Link href="/notesScreen"
+                className="flex-row items-center mb-4 bg-gray-200 rounded-lg p-2 w-10 justify-center ml-8"
             >
-                <Ionicons name="md-document-text" size={32} color="black" />
-                <Text className="ml-2 text-lg">Notas</Text>
-            </TouchableOpacity>
+                <Ionicons name="document-text" size={25} color="black" />
+            </Link>
 
-            <TouchableOpacity
-                className="flex-row items-center mb-4 bg-gray-200 rounded-lg p-4 w-4/5 justify-center"
-                onPress={goList}
+            <Link href="/listScreen"
+                className="flex-row items-center mb-4 bg-gray-200 rounded-lg p-2 w-10 justify-center ml-8"
             >
-                <FontAwesome name="list" size={32} color="black" />
-                <Text className="ml-2 text-lg">Listas</Text>
-            </TouchableOpacity>
+                <FontAwesome name="list" size={25} color="black" />
+            </Link>
 
-            <TouchableOpacity
-                className="flex-row items-center mb-4 bg-gray-200 rounded-lg p-4 w-4/5 justify-center"
-                onPress={goActivities}
+            <Link href="/activityScreen"
+                className="flex-row items-center mb-4 bg-gray-200 rounded-lg p-2 w-12 justify-center ml-8"
             >
-                <Ionicons name="md-checkmark-circle" size={32} color="black" />
-                <Text className="ml-2 text-lg">Atividades</Text>
-            </TouchableOpacity>
+                <Ionicons name="checkmark-circle" size={25} color="black" />
+            </Link>
       </View>
 
     </View>
