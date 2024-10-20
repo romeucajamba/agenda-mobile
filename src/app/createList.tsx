@@ -3,7 +3,7 @@ import { View, Text, Button, TextInput } from 'react-native';
 import * as Listas from '../db/list'; 
 import { abrirBancoDeDados } from '../db/database'; 
 
-const ListaScreen: React.FC = () => {
+const ListaCretead: React.FC = () => {
   const [lista, setLista] = useState<any[]>([]);
   const [item, setItem] = useState('');
   const [categoria, setCategoria] = useState('');
@@ -53,4 +53,4 @@ const ListaScreen: React.FC = () => {
     </View>
   );
 };
-export default ListaScreen;
+export default ListaCretead;

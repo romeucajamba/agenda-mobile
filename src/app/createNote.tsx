@@ -3,7 +3,7 @@ import { View, Text, Button, FlatList, TouchableOpacity, TextInput } from 'react
 import * as Notas from '../db/notes'; 
 import { abrirBancoDeDados } from '../db/database'; 
 
-const NotesScreen: React.FC = () => {
+const NotesCreated: React.FC = () => {
   const [notas, setNotas] = useState<any[]>([]);
   const [titulo, setTitulo] = useState('');
   const [conteudo, setConteudo] = useState('');
@@ -53,4 +53,4 @@ const NotesScreen: React.FC = () => {
     </View>
   );
 };
-export default NotesScreen;
+export default NotesCreated;

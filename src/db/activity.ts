@@ -1,4 +1,4 @@
-export const inserirAtividade = async (db: any, descricao: string, status: string, data_criacao: string) => {
+export const inserirAtividade = async (db: any, descricao: string, status: string, data_criacao: string | null) => {
     await db.runAsync('INSERT INTO atividades (descricao, status, data_criacao) VALUES (?, ?, ?)', descricao, status, data_criacao);
   };
   
