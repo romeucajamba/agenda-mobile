@@ -59,25 +59,22 @@
 - Instale as dependências do projeto:
     ```bash
       npm install
-
+- Instalar o sqlite
+    ```bash
+        npx expo install expo-sqlite
 - Execute o projeto no Expo:
     ```bash
      expo start
-
 - Criar projecto
     ```bash
         npm install --global eas-cli 
         npx create-expo-app agenda 
-
 - Acessar o projecto
     ```bash
       cd agenda
-
 - Rodar o projecto
     ```bash
       expo start
-
 - Rodar testes unitário
     ```bash
       npm test
-
