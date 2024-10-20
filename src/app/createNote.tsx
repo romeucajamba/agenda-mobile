@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, Button, FlatList, TouchableOpacity, TextInput } from 'react-native';
 import * as Notas from '../db/notes'; 
 import { abrirBancoDeDados } from '../db/database'; 
-import { Link } from 'expo-router';
 
 const NotesScreen: React.FC = () => {
   const [notas, setNotas] = useState<any[]>([]);

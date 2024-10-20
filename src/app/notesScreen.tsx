@@ -28,10 +28,10 @@ const NotesScreen: React.FC = () => {
     <View className="border border-gray-300 p-4 mb-2 rounded">
       <Text className="text-lg font-bold">{item.titulo}</Text>
       <Link href={{ pathname: '/calendar', params: { nota: item } }}>
-        <Text className="text-blue-500">Ver/Editar</Text>
+        <Text className="text-blue-500">{item.conteudo}</Text>
       </Link>
       <TouchableOpacity onPress={() => handleDelete(item.id)}>
-        <Text className="text-red-500">Deletar</Text>
+        <Ionicons name="remove" size={20} color="black" />
       </TouchableOpacity>
     </View>
   );
